@@ -29,8 +29,8 @@ Route::get('/lang/{lang}', function ($lang) {
 Route::group(['middleware' => 'lang'], function () {
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->middleware('auth');
 
 Auth::routes();
 Route::resource('group', 'GroupController');

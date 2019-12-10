@@ -64,7 +64,10 @@
 		============================================ -->
     <script src="{{asset('/js/vendor/modernizr-2.8.3.min.js')}}"></script>
     <script src="{{asset('/ajax/libs/jquery/1.7.1/jquery.min.js')}}"></script>
+
     <style>
+        @media only screen and (min-width: 1100px) {
+
             .num{
                 background: red;
                 padding: 7px;
@@ -105,7 +108,8 @@
           th {
             text-align:@lang('home.left');
             }
-            </style>
+            }
+    </style>
 </head>
 
 <body>
