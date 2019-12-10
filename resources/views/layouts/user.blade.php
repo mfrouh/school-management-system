@@ -154,12 +154,6 @@
                             <a title="@lang('home.subjects')" href="/subject" aria-expanded="false"><span class="mini-click-non"> @lang('home.subjects')</span></a>
                         </li>
 
-                        {{-- <li>
-                            <a title="@lang('home.exams')" href="/exam" aria-expanded="false"><span class="mini-click-non"> @lang('home.exams') </span></a>
-                        </li>
-                        <li>
-                            <a title="@lang('home.contents')" href="/content" aria-expanded="false"><span class="mini-click-non"> @lang('home.contents')</span></a>
-                        </li> --}}
                         @endif
                         @if(auth()->user()->role_id==2)
                         <li>
@@ -331,9 +325,9 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <ul class="breadcome-menu">
-                                            <li><a href="#">Home</a> <span class="bread-slash">/</span>
+                                            <li><a href="#"></a> <span class="bread-slash"></span>
                                             </li>
-                                            <li><span class="bread-blod">All Professors</span>
+                                            <li><span class="bread-blod"></span>
                                             </li>
                                         </ul>
                                     </div>
