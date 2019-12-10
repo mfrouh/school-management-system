@@ -98,5 +98,6 @@ return [
 'password_confirmation'=>'تاكيد كلمة السر',
 'mytable'=>'جدولي',
 'results'=>'النتائج',
+'login'=>'دخول',
 
 ];

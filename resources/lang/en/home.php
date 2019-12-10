@@ -96,6 +96,7 @@ return [
 'password_confirmation'=>'Password Confirmation',
 'mytable'=>'My Table',
 'results'=>'Results',
+'login'=>'Login',
 
 
 

@@ -5,8 +5,7 @@
 @section('content')
 <div class="error-page-int">
         <div class="text-center m-b-md custom-login">
-            <h3>PLEASE LOGIN TO APP</h3>
-            <p>This is the best app ever!</p>
+            <h3>@lang('home.login')</h3>
         </div>
         <div class="content-error">
             <div class="hpanel">
@@ -23,15 +22,15 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label class="control-label" for="password">Password</label>
-                            <input type="password" title="Please enter your password" placeholder="" required="" value="" name="password" id="password" class="form-control @error('password') is-invalid @enderror">
+                            <label class="control-label" for="password">@lang('home.password')</label>
+                            <input type="password" title="Please enter your password" placeholder="@lang('home.password')" required="" value="" name="password" id="password" class="form-control @error('password') is-invalid @enderror">
                             @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror
                         </div>
-                        <button class="btn btn-success btn-block loginbtn">Login</button>
+                        <button class="btn btn-success btn-block loginbtn">@lang('home.login')</button>
                     </form>
                 </div>
             </div>
