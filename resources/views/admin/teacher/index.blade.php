@@ -1,4 +1,7 @@
 @extends('layouts.user')
+@section('title')
+@lang('home.teachers')
+@endsection
 @section('content')
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="product-status-wrap drp-lst">

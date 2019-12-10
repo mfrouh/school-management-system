@@ -71,7 +71,11 @@ class ContentController extends Controller
      */
     public function edit(content $content)
     {
+        if($content->subject->user_id==auth()->user()->id){
+
         return view('teacher.content.edit',compact('content'));
+        }
+        return abort('404');
     }
 
     /**
@@ -103,7 +107,10 @@ class ContentController extends Controller
      */
     public function destroy(content $content)
     {
+        if($content->subject->user_id==auth()->user()->id){
         $content->delete();
         return back();
+        }
+        return abort('404');
     }
 }

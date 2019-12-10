@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>All Professor | Kiaalap - Kiaalap Admin Template</title>
+    <title>@yield('title')</title>
     <meta name="description" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('/img/favicon.ico')}}">
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
@@ -150,12 +150,12 @@
                             <a title="@lang('home.subjects')" href="/subject" aria-expanded="false"><span class="mini-click-non"> @lang('home.subjects')</span></a>
                         </li>
 
-                        <li>
+                        {{-- <li>
                             <a title="@lang('home.exams')" href="/exam" aria-expanded="false"><span class="mini-click-non"> @lang('home.exams') </span></a>
                         </li>
                         <li>
                             <a title="@lang('home.contents')" href="/content" aria-expanded="false"><span class="mini-click-non"> @lang('home.contents')</span></a>
-                        </li>
+                        </li> --}}
                         @endif
                         @if(auth()->user()->role_id==2)
                         <li>

@@ -36,6 +36,7 @@ class actionteacherController extends Controller
         $examstudent1=studentresultexam::where('exam_id',$id)->where('state','pass')->count();
         $examstudent2=studentresultexam::where('exam_id',$id)->where('state','fail')->count();
         $exam=exam::where('id',$id)->firstorfail();
+        if($exam->subject->user_id==auth()->user()->id){
         $chart = new UserChart;
         $chart->labels(['PassStudent', 'FailStudent']);
         $chart->dataset('My dataset', 'pie', [$examstudent1,$examstudent2])->backgroundColor(['green','red']);
@@ -47,6 +48,8 @@ class actionteacherController extends Controller
         $chart1->title($exam->name, 14,  '#111',true," sans-serif")	;
         $chart1->displayAxes(false);
         return view('teacher.exam.result')->with('exam',$exam)->with('chart1',$chart1)->with('chart',$chart)->with('wrong',$wrong)->with('correct',$correct)->with('notanswer',$notanswer)->with('id',$id);
+        }
+        return abort('404');
     }
 
     public function exams()
@@ -58,6 +61,11 @@ class actionteacherController extends Controller
       $examstudent=studentresultexam::where('exam_id',$examid)->where('user_id',$userid)->first();
       $questions=question::where('exam_id',$examid)->get();
       return view('teacher.exam.detailsresultexam')->with('examstudent',$examstudent)->with('questions',$questions);
+    }
+    public function mytable()
+    {
+        return view('teacher.table.mytable');
+
     }
 
 }

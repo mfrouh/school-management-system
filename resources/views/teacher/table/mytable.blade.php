@@ -1,5 +1,7 @@
 @extends('layouts.user')
-
+@section('title')
+@lang('home.mytable')
+@endsection
 @section('content')
 <div class="container">
   <table class="table table-bordered text-center" style="background:white;">

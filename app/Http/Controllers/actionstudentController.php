@@ -59,12 +59,12 @@ class actionstudentController extends Controller
             return abort('403','exam is disactive');
         }
 
-        elseif(count($questions)>0 &&  $studentresultexamcount==0 && $exam->subject->studentclass_id==auth()->user()->student_details->studentclass_id )
+        elseif(count($questions)>0 &&  $studentresultexamcount==0 && $exam->subject->studentclass_id!=auth()->user()->student_details->studentclass_id )
         {
-            return abort('403','You Must Be In The Group');
+            return abort('403','Not for you');
         }
 
-        elseif(count($questions)>0)
+        elseif(count($questions)==0)
         {
          return abort('403','not have questions');
         }

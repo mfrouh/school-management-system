@@ -85,7 +85,11 @@ class ExamController extends Controller
      */
     public function edit(exam $exam)
     {
-        return view('teacher.exam.edit',compact('exam'));
+        if($exam->subject->user_id==auth()->user()->id){
+
+          return view('teacher.exam.edit',compact('exam'));
+        }
+        return abort('404');
     }
 
     /**
@@ -123,8 +127,11 @@ class ExamController extends Controller
      */
     public function destroy(exam $exam)
     {
+       if($exam->subject->user_id==auth()->user()->id){
         $exam->delete();
         return back();
+       }
+       return abort('404');
     }
 
 }

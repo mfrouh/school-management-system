@@ -1,5 +1,7 @@
 @extends('layouts.user')
-
+@section('title')
+@lang('home.results')
+@endsection
 @section('content')
 <div class="container-fluid">
  <div class="row">

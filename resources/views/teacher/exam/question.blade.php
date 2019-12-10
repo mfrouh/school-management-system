@@ -1,4 +1,8 @@
 @extends('layouts.user')
+@section('title')
+@lang('home.questions')
+@endsection
+
 @section('content')
 
 <div class="container-fluid">

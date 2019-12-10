@@ -1,4 +1,7 @@
 @extends('layouts.user')
+@section('title')
+@lang('home.subjects')
+@endsection
 @section('content')
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="product-payment-inner-st">

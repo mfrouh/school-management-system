@@ -1,4 +1,7 @@
 @extends('layouts.user')
+@section('title')
+@lang('home.exams')
+@endsection
 @section('content')
 <div class="container">
         @php

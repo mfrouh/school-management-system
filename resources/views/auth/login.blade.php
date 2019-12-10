@@ -1,5 +1,7 @@
 @extends('layouts.out')
-
+@section('title')
+@lang('home.login')
+@endsection
 @section('content')
 <div class="error-page-int">
         <div class="text-center m-b-md custom-login">
