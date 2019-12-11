@@ -34,3 +34,39 @@ function sorteimage($despath,$req_file_img){
   $files->move($destinationPath, $file_name);
   return $file_name;
 }
+function find_in_array($value,$columnname,$arrayobject)
+{
+    $arr=array();
+    foreach ($arrayobject as $key => $item) {
+        $arr[]=$item->$columnname;
+    }
+    if(in_array($value,$arr))
+    {
+      return 1;
+    }
+    return 0;
+}
+function get_array_search_table($arrayobject,$columnname,$table,$columnnametable)
+{
+    $arr=array();
+    foreach ($arrayobject as $key => $item) {
+        $arr[]=$item->$columnname;
+    }
+    if($arr!=null)
+    {
+      return $table::whereIn($columnnametable,$arr)->get();
+    }
+    return $table;
+}
+function get_table_search_table($table1,$columnnametable1,$table2,$columnnametable2)
+{
+    $arr=array();
+    foreach ($table1::all() as $key => $item) {
+        $arr[]=$item->$columnnametable1;
+    }
+    if($arr!=null)
+    {
+      return $table2::whereIn($columnnametable2,$arr)->get();
+    }
+    return $table2;
+}

@@ -28,7 +28,6 @@
                    $arr[]=$value->id;
                 }
                 $contents=App\content::whereIn('subject_id',$arr)->get();
-
                 @endphp
                 @foreach($contents as $k => $content)
                 <tr>
