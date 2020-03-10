@@ -40,12 +40,12 @@ class actionteacherController extends Controller
         $chart = new UserChart;
         $chart->labels(['PassStudent', 'FailStudent']);
         $chart->dataset('My dataset', 'pie', [$examstudent1,$examstudent2])->backgroundColor(['green','red']);
-        $chart->title($exam->name, 14,  '#111',true," sans-serif")	;
+        $chart->title($exam->name, 14,  '#111'," sans-serif")	;
         $chart->displayAxes(false);
         $chart1 = new UserChart;
         $chart1->labels(['correct', 'wrong','notanswer']);
         $chart1->dataset('Questions', 'pie', [count($correct),count($wrong),count($notanswer)])->backgroundColor(['green','red','blue']);
-        $chart1->title($exam->name, 14,  '#111',true," sans-serif")	;
+        $chart1->title($exam->name, 14,  '#111'," sans-serif")	;
         $chart1->displayAxes(false);
         return view('teacher.exam.result')->with('exam',$exam)->with('chart1',$chart1)->with('chart',$chart)->with('wrong',$wrong)->with('correct',$correct)->with('notanswer',$notanswer)->with('id',$id);
         }

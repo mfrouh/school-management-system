@@ -183,7 +183,7 @@
 
                         </li>
                         <li class="">
-                                <a class="has-arrow" href="index.html" aria-expanded="false">
+                                <a class="has-arrow" href="/" aria-expanded="false">
                                        <span class="mini-click-non">@lang('home.contents')</span>
                                     </a>
                                 <ul class="submenu-angle collapse" aria-expanded="true" style="height: 0px;">
