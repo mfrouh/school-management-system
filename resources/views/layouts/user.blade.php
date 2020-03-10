@@ -36,7 +36,6 @@
     <link rel="stylesheet" href="{{asset('/css/meanmenu.min.css')}}">
     <!-- main CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('/css/main.css')}}">
     <!-- educate icon CSS
 		============================================ -->
     <link rel="stylesheet" href="{{asset('/css/educate-custon-icon.css')}}">
@@ -110,6 +109,9 @@
             }
             }
     </style>
+        <link rel="stylesheet" href="{{asset('/css/main.css')}}">
+        <link rel="stylesheet" href="{{asset('/css/maine.css')}}">
+
 </head>
 
 <body>

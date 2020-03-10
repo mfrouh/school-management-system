@@ -70,3 +70,44 @@ function get_table_search_table($table1,$columnnametable1,$table2,$columnnametab
     }
     return $table2;
 }
+ function gettable($table,$columnnametable1=null,$operation1=null,$value1=null,$columnnametable2=null,$operation2=null,$value2=null,$columnnametable3=null,$operation3=null,$value3=null)
+ {
+    if($operation1==null)
+    {
+        return $table::all();
+    }
+    elseif($operation2==null)
+    {
+        return $table::$operation1($columnnametable1,$value1)->get();
+    }
+    elseif($operation3==null)
+    {
+        return $table::$operation1($columnnametable1,$value1)->$operation2($columnnametable2,$value2)->get();
+    }
+    else
+    {
+        return $table::$operation1($columnnametable1,$value1)->$operation2($columnnametable2,$value2)->$operation3($columnnametable3,$value3)->get();
+    }
+
+
+ }
+ function getsinglerow($table,$columnnametable1=null,$operation1=null,$value1=null,$columnnametable2=null,$operation2=null,$value2=null,$columnnametable3=null,$operation3=null,$value3=null)
+ {
+    if($operation1==null)
+    {
+        return $table::first();
+    }
+    elseif($operation2==null)
+    {
+        return $table::$operation1($columnnametable1,$value1)->first();
+    }
+    elseif($operation3==null)
+    {
+        return $table::$operation1($columnnametable1,$value1)->$operation2($columnnametable2,$value2)->first();
+    }
+    else
+    {
+        return $table::$operation1($columnnametable1,$value1)->$operation2($columnnametable2,$value2)->$operation3($columnnametable3,$value3)->first();
+    }
+ }
+

@@ -33,8 +33,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <!-- main CSS
 		============================================ -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- morrisjs CSS
+        <link rel="stylesheet" href="{{asset('/css/main.css')}}">
+        <link rel="stylesheet" href="{{asset('/css/maine.css')}}">
+        <!-- morrisjs CSS
 		============================================ -->
     <link rel="stylesheet" href="css/morrisjs/morris.css">
     <!-- mCustomScrollbar CSS
